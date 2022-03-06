@@ -3,11 +3,13 @@ import { RoomsList } from "../views/RoomsList";
 import { Button } from "../common/Button";
 import "./navigation.scss";
 import { TreatmentsList } from "../views/TreatmentsList";
+import { Cart } from "../views/Cart";
 
 const navItems = [
   { name: "Home", component: Home },
   { name: "Rooms", component: RoomsList },
   { name: "Treatments", component: TreatmentsList },
+  { name: "Cart", component: Cart },
 ];
 
 export function Navigation() {

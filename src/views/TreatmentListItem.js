@@ -1,3 +1,5 @@
+import { AddToCartButton } from "../common/AddToCartButton";
+
 export function TreatmentListItem(treatment) {
   const article = document.createElement("article");
 
@@ -9,5 +11,6 @@ export function TreatmentListItem(treatment) {
         </p>
     `;
 
+  article.append(AddToCartButton(treatment));
   return article;
 }

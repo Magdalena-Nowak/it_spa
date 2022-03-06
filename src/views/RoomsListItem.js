@@ -1,5 +1,6 @@
 import { Button } from "../common/Button";
 import { RoomDetails } from "./RoomDetails";
+import { AddToCartButton } from "../common/AddToCartButton";
 
 export function RoomsListItem(room) {
   const li = document.createElement("li");
@@ -22,5 +23,7 @@ export function RoomsListItem(room) {
       },
     })
   );
+
+  li.append(AddToCartButton(room));
   return li;
 }
