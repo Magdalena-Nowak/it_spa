@@ -8,11 +8,15 @@ export function Cart() {
   const table = document.createElement("table");
   table.classList.add("table");
 
-  const tableHead = document.createElement("tr");
+  const tableHead = document.createElement("thead");
   tableHead.innerHTML = `
-    <th>Product</th>
-    <th>Price</th>
-    <th></th>
+  <tr>
+    <th scope="col">Product</th>
+    <th scope="col">Price</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Value</th>
+    <th scope="col">Delete</th>
+    </tr>
     `;
 
   const tableRows = cartManager.getAllItems().map((item) => {
@@ -20,8 +24,10 @@ export function Cart() {
 
     tr.innerHTML = `
       <td>${item.name}</td>
-      <td>${item.price}</td>
-      <td></td>
+      <td>${item.price} PLN</td>
+      <td>Quantity</td>
+      <td>Value</td>
+      <td>Delete</td>
       `;
     tr.lastElementChild.append(RemoveFromCartButton(item));
     return tr;
@@ -29,6 +35,8 @@ export function Cart() {
 
   const tableFooter = document.createElement("tr");
   tableFooter.innerHTML = `
+  <td></td>
+  <td></td>
   <td></td>
   <td>
   <strong>${cartManager.getTotal().toFixed(2)} PLN</strong>
