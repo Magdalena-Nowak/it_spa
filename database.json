@@ -2,88 +2,353 @@
   "users": [],
   "rooms": [
     {
-      "id": 1,
-      "name": "Pokój unarny",
-      "beds": 1,
-      "guests": 1,
-      "price": 170,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose"
+      "id": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "name": "Pokój Standard",
+      "price": 870,
+      "property": {
+        "guests": 2,
+        "beds": "2 x pojedyncze",
+        "balcony": "Nie",
+        "surface-area": "29",
+        "view": "Na podjazd/ na polankę"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Łazienka z prysznicem, dwa łóżka lub łoże małżeńskie, dodatkowa rozkładana sofa. Wszystkie pokoje dla niepalących."
     },
     {
-      "id": 2,
-      "name": "Pokój binarny",
-      "beds": 1,
-      "guests": 2,
-      "price": 240,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose"
+      "id": "f2f2efe0-a786-11ec-b909-0242ac120002",
+      "name": "Pokój Superior",
+      "price": 1070,
+      "property": {
+        "guests": 3,
+        "beds": [
+          "1 x podwójne",
+          "1 x składane"
+        ],
+        "balcony": "Tak",
+        "surface-area": "42",
+        "view": "Na podjazd/ na polankę"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Łazienka z wanną i prysznicem, łoże małżeńskie, dodatkowa rozkładana sofa. Wszystkie pokoje dla niepalących."
     },
     {
-      "id": 3,
-      "name": "Pokój trójkowy",
-      "beds": 2,
-      "guests": 3,
-      "price": 290,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose"
+      "id": "f2f2f1d4-a786-11ec-b909-0242ac120002",
+      "name": "Pokój Executive",
+      "price": 970,
+      "property": {
+        "guests": 2,
+        "beds": [
+          "1 x podwójne"
+        ],
+        "balcony": "Nie",
+        "surface-area": "42",
+        "view": "Na podjazd"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Łazienka z wanną i prysznicem, łoże małżeńskie. Wszystkie pokoje dla niepalących."
     },
     {
-      "id": 4,
-      "name": "Pokój czwórkowy",
-      "beds": 2,
-      "guests": 4,
-      "price": 340,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose"
+      "id": "f2f2f3b4-a786-11ec-b909-0242ac120002",
+      "name": "Studio",
+      "price": 1370,
+      "property": {
+        "guests": 3,
+        "beds": [
+          "1 x podwójne",
+          "1 x pojedyncze",
+          "1 x składane"
+        ],
+        "balcony": "Tak",
+        "surface-area": 48,
+        "view": "Na las"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Pokój główny z łożem małżeńskim oraz kącikiem wypoczynkowym z rozkładaną sofą. Wydzielona jednoosobowa sypialnia. Taras z krzesłami i stolikiem. Wszystkie pokoje dla niepalących."
+    },
+    {
+      "id": "f2f2f86e-a786-11ec-b909-0242ac120002",
+      "name": "Pokój Superior PLUS",
+      "price": 1370,
+      "property": {
+        "guests": 4,
+        "beds": [
+          "1 x podwójne",
+          "2 x pojedyncze"
+        ],
+        "balcony": "Tak",
+        "surface-area": 48,
+        "view": "Na las / na polanką"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Łazienka z wanną i prysznicem, łoże małżeńskie w jednym pomieszczeniu oraz dwa oddzielne łóżka w drugim. Wszystkie pokoje dla niepalących."
+    },
+    {
+      "id": "f2f2f9ea-a786-11ec-b909-0242ac120002",
+      "name": "Apartament Junior",
+      "price": 1620,
+      "property": {
+        "guests": 2,
+        "beds": [
+          "1 x podwójne",
+          "1 x składane"
+        ],
+        "balcony": "Tak",
+        "surface-area": 30,
+        "view": "Na las"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Łazienka z wanną i prysznicem, łoże małżeńskie, dodatkowa rozkładana sofa, pokój dzienny. Wszystkie pokoje dla niepalących."
+    },
+    {
+      "id": "f2f2fb52-a786-11ec-b909-0242ac120002",
+      "name": "Apartament Senior",
+      "price": 1720,
+      "property": {
+        "guests": 3,
+        "beds": [
+          "1 x podwójne",
+          "1 x składane",
+          "1 x pojedyncze"
+        ],
+        "balcony": "Nie",
+        "surface-area": 76,
+        "view": "Na las"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Apartament dwupoziomowy. Pokój dzienny z kącikiem wypoczynkowym z rozkładaną sofą, dwuosobowa sypialnia z łazienką, jednoosobowa sypialnia z łazienką - na antresoli. Wszystkie pokoje dla niepalących."
+    },
+    {
+      "id": "f2f2fcba-a786-11ec-b909-0242ac120002",
+      "name": "Pokój Grand",
+      "price": 1920,
+      "property": {
+        "guests": 4,
+        "beds": [
+          "1 x podwójne",
+          "1 x składane",
+          "2 x pojedyncze"
+        ],
+        "balcony": "Nie",
+        "surface-area": 76,
+        "view": "Na las"
+      },
+      "facilities": [
+        "bezprzewodowy, bezpłatny internet",
+        "klimatyzacja",
+        "telefon",
+        "telewizja satelitarna",
+        "sejf",
+        "kawa/herbata/woda",
+        "mini bar",
+        "suszarka do włosów",
+        "szlafrok i kapcie",
+        "żelazko / deska"
+      ],
+      "images": {
+        "main": "1",
+        "grid1": "2",
+        "grid2": "3",
+        "grid3": "4"
+      },
+      "description": "Apartament dwupoziomowy. Pokój główny z kącikiem wypoczynkowym z rozkładaną sofą, dwie dwuosobowe sypialnie, dwie łazienki. Taras z krzesłami i stolikiem. Wszystkie pokoje dla niepalących."
     }
   ],
   "treatments": [
     {
-      "id": 1,
-      "name": "Masaż rozgrzanym monitorem",
-      "area": "back",
-      "time": 30,
-      "price": 80
-    },
-    {
-      "id": 2,
-      "name": "Biczowanie kablem od myszy",
-      "area": "back",
+      "id": "f2f2fe4a-a786-11ec-b909-0242ac120002",
+      "name": "Masaż głowy",
       "time": 20,
-      "price": 70
+      "price": "x",
+      "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami."
     },
     {
-      "id": 3,
-      "name": "Peeling odłamkami płyty CD",
-      "area": "face",
-      "time": 15,
-      "price": 50
-    },
-    {
-      "id": 4,
-      "name": "Pedicure woskiem z USB",
-      "area": "legs",
-      "time": 25,
-      "price": 100
-    },
-    {
-      "id": 5,
-      "name": "Manicure analogowo-cyfrowy",
-      "area": "hands",
-      "time": 45,
-      "price": 150
-    },
-    {
-      "id": 6,
-      "name": "Kąpiel w gorącej kawie",
-      "area": "body",
+      "id": "f2f2ffbc-a786-11ec-b909-0242ac120002",
+      "name": "Masaż Tajski całego ciała",
       "time": 60,
-      "price": 200
+      "price": "x",
+      "description": "Głęboki masaż, stanowiący sekwencję technik łączących akupresurę ważniejszych punktów na ciele człowieka z elementami pasywnej jogi, rozciągania i refleksologii. Masaż wykonywany za pomocą dłoni, kciuków, łokci i przedramion a także stóp."
     },
     {
-      "id": 7,
-      "name": "Depilacja dyskiem twardym",
-      "area": "body",
-      "time": 45,
-      "price": 120
+      "id": "f2f30138-a786-11ec-b909-0242ac120002",
+      "name": "Masaż Balijski całego ciała",
+      "time": 60,
+      "price": "x",
+      "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała."
+    },
+    {
+      "id": "f2f304e4-a786-11ec-b909-0242ac120002",
+      "name": "Masaż SPA gorącymi kamieniami",
+      "time": 75,
+      "price": "x",
+      "description": "Relaksujący masaż całego ciała przy użyciu rozgrzanych kamieni bazaltowych oraz klasycznej metody masażu wykorzystującej techniki relaksacyjne. Masaż doskonale rozgrzewa i likwiduje napięcie mięśniowe."
+    },
+    {
+      "id": "f2f30656-a786-11ec-b909-0242ac120002",
+      "name": "Abhyangam",
+      "time": 90,
+      "price": "x",
+      "description": "Tradycyjny masaż ajurwedyjski całego ciała oraz głowy na bazie olejów ziołowych wykorzystujący relaksacyjne techniki masażu oraz ucisk punktów energetycznych. Daje poczucie pełnego relaksu i rozluźnienia, któremu dodatkowo towarzyszy aromat unikalnych olejów ziołowych."
+    },
+    {
+      "id": "f2f307be-a786-11ec-b909-0242ac120002",
+      "name": "Tajski masaż stóp",
+      "time": 50,
+      "price": "x",
+      "description": "Dość intensywny masaż stopy i łydki wykonywany dłońmi oraz specjalną pałeczką z drewna różanego na bazie maści rozgrzewającej."
+    },
+    {
+      "id": "f2f30926-a786-11ec-b909-0242ac120002",
+      "name": "SPA & MINERALS - rewitalizująco - ujędrniający zabieg na ciało",
+      "time": 60,
+      "price": "x",
+      "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach."
+    },
+        {
+      "id": "f2f30a7a-a786-11ec-b909-0242ac120002",
+      "name": "CHAMPAGNE & TRUFFLE - zabieg rewitalizujący na ciało",
+      "time": 120,
+      "price": "x",
+      "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi."
+    },
+            {
+      "id": "f2f30df4-a786-11ec-b909-0242ac120002",
+      "name": "Aroma Candle Senses",
+      "time": 100,
+      "price": "x",
+      "description": "Klasyczny masaż całego ciała wykonywany na bazie wosku z gorących aromatycznych świec. Masaż oprócz odprężenia, dzięki właściwościom wosku, wygładza ciało a subtelny aromat rozgrzanego oleju wprowadza w stan relaksu."
     }
-  ]
+  ],
+  "cart": {
+    "treatments": [
+      {
+        "id": 1,
+        "quantity": 1
+      }
+    ],
+    "rooms": [
+      {
+        "id": 1,
+        "quantity": 1
+      }
+    ]
+  }
 }
- 
