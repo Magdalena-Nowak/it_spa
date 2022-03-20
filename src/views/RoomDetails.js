@@ -1,8 +1,9 @@
+const axios = require("axios");
 import { RoomsList } from "./RoomsList";
 import { Button } from "../common/Button";
 
 const backButton = Button({
-  text: "Back",
+  text: "Wróć do listy",
   classes: "btn btn-primary",
   onClick: () => {
     const customEvent = new CustomEvent("navigate", {
@@ -16,29 +17,46 @@ const backButton = Button({
 export function RoomDetails(id) {
   const section = document.createElement("section");
 
-  section.innerHTML = `<h2>Room Details</h2>
-  <header>Loading...</header>`;
+  section.innerHTML = `<header>Loading...</header>`;
 
-  fetch(`http://localhost:3000/rooms/${id}`)
-    .then((response) => response.json())
-    .then((room) => {
-      section.querySelector("header").remove();
+  axios.get(`http://localhost:3000/rooms/${id}`).then(function (response) {
+    section.querySelector("header").remove();
 
-      const article = document.createElement("article");
-      article.innerHTML = `
-      <h3>${room}</h3>
+    const article = document.createElement("article");
+    article.innerHTML = `
+      <h2>${response.data.name}</h2>
       <hr>
-      <p>${room.description}</p>
+      <p>${response.data.description}</p>
       <hr>
-      <p>🛏️ ${room.beds}</p>
-      <p>🙍 ${room.guests}</p>
-      <p>
-      <strong>${room.price.toFixed(2)} PLN</strong>
-      </p>
       `;
 
-      section.append(article, backButton);
+    const property = document.createElement("div");
+    property.innerHTML = `
+    <h3>Właściwości</h3>
+    <ul>
+    <li>Liczba osób: ${response.data.property.guests}</li>
+    <li>Powierzchnia: ${response.data.property.area} m<sup>2</sup></li>
+    <li>Balkon / Taras: ${response.data.property.view}</li>
+    <li>Łóżka: ${response.data.property.beds}</li>
+    <li>Widok: ${response.data.property.view}</li>
+    </ul>
+    `;
+
+    const facilities = document.createElement("div");
+    const facilitiesHeader = document.createElement("h3");
+    facilitiesHeader.innerHTML = "Wyposażenie";
+    const facilitiesList = document.createElement("ul");
+    const facilitiesItem = response.data.facilities.map((item) => {
+      const facility = document.createElement("li");
+      facility.innerHTML = item;
+      return facility;
     });
+
+    facilitiesList.append(...facilitiesItem);
+    facilities.append(facilitiesHeader, facilitiesList);
+    article.append(property, facilities);
+    section.append(article, backButton);
+  });
 
   return section;
 }

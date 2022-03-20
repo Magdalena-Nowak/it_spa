@@ -1,3 +1,4 @@
+const axios = require("axios");
 import { AddToCartButton } from "../common/AddToCartButton";
 
 export function TreatmentListItem(treatment) {
@@ -9,7 +10,10 @@ export function TreatmentListItem(treatment) {
         <p>
             <strong>${treatment.price.toFixed(2)} PLN</strong>
         </p>
+        <p>${treatment.description}</p>
     `;
+
+  //Add image
 
   article.append(AddToCartButton(treatment));
   return article;

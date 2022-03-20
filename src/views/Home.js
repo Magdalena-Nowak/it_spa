@@ -1,6 +1,7 @@
 export function Home() {
   const section = document.createElement("section");
   const img = document.createElement("img");
+
   img.src = require("../assets/laptop.jpg");
   section.innerHTML = `
     <h2>Home</h2>

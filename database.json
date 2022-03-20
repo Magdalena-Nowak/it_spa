@@ -9,7 +9,7 @@
         "guests": 2,
         "beds": "2 x pojedyncze",
         "balcony": "Nie",
-        "surface-area": "29",
+        "area": "29",
         "view": "Na podjazd/ na polankę"
       },
       "facilities": [
@@ -42,7 +42,7 @@
           "1 x składane"
         ],
         "balcony": "Tak",
-        "surface-area": "42",
+        "area": "42",
         "view": "Na podjazd/ na polankę"
       },
       "facilities": [
@@ -75,7 +75,7 @@
           "1 x podwójne"
         ],
         "balcony": "Nie",
-        "surface-area": "42",
+        "area": "42",
         "view": "Na podjazd"
       },
       "facilities": [
@@ -100,7 +100,7 @@
     },
     {
       "id": "f2f2f3b4-a786-11ec-b909-0242ac120002",
-      "name": "Studio",
+      "name": "Apartament Studio",
       "price": 1370,
       "property": {
         "guests": 3,
@@ -110,7 +110,7 @@
           "1 x składane"
         ],
         "balcony": "Tak",
-        "surface-area": 48,
+        "area": 48,
         "view": "Na las"
       },
       "facilities": [
@@ -144,7 +144,7 @@
           "2 x pojedyncze"
         ],
         "balcony": "Tak",
-        "surface-area": 48,
+        "area": 48,
         "view": "Na las / na polanką"
       },
       "facilities": [
@@ -178,7 +178,7 @@
           "1 x składane"
         ],
         "balcony": "Tak",
-        "surface-area": 30,
+        "area": 30,
         "view": "Na las"
       },
       "facilities": [
@@ -213,7 +213,7 @@
           "1 x pojedyncze"
         ],
         "balcony": "Nie",
-        "surface-area": 76,
+        "area": 76,
         "view": "Na las"
       },
       "facilities": [
@@ -248,7 +248,7 @@
           "2 x pojedyncze"
         ],
         "balcony": "Nie",
-        "surface-area": 76,
+        "area": 76,
         "view": "Na las"
       },
       "facilities": [
@@ -277,64 +277,73 @@
       "id": "f2f2fe4a-a786-11ec-b909-0242ac120002",
       "name": "Masaż głowy",
       "time": 20,
-      "price": "x",
-      "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami."
+      "price": 100,
+      "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami.",
+      "img": "./assets/head-treatment.jpg"
     },
     {
       "id": "f2f2ffbc-a786-11ec-b909-0242ac120002",
       "name": "Masaż Tajski całego ciała",
       "time": 60,
-      "price": "x",
-      "description": "Głęboki masaż, stanowiący sekwencję technik łączących akupresurę ważniejszych punktów na ciele człowieka z elementami pasywnej jogi, rozciągania i refleksologii. Masaż wykonywany za pomocą dłoni, kciuków, łokci i przedramion a także stóp."
+      "price": 220,
+      "description": "Głęboki masaż, stanowiący sekwencję technik łączących akupresurę ważniejszych punktów na ciele człowieka z elementami pasywnej jogi, rozciągania i refleksologii. Masaż wykonywany za pomocą dłoni, kciuków, łokci i przedramion a także stóp.",
+      "img": "../assets/thai-treatment.jpg"
     },
     {
       "id": "f2f30138-a786-11ec-b909-0242ac120002",
       "name": "Masaż Balijski całego ciała",
       "time": 60,
-      "price": "x",
-      "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała."
+      "price": 200,
+      "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała.",
+      "img": "./assets/balinese-treatment.jpg"
     },
     {
       "id": "f2f304e4-a786-11ec-b909-0242ac120002",
       "name": "Masaż SPA gorącymi kamieniami",
       "time": 75,
-      "price": "x",
-      "description": "Relaksujący masaż całego ciała przy użyciu rozgrzanych kamieni bazaltowych oraz klasycznej metody masażu wykorzystującej techniki relaksacyjne. Masaż doskonale rozgrzewa i likwiduje napięcie mięśniowe."
+      "price": 160,
+      "description": "Relaksujący masaż całego ciała przy użyciu rozgrzanych kamieni bazaltowych oraz klasycznej metody masażu wykorzystującej techniki relaksacyjne. Masaż doskonale rozgrzewa i likwiduje napięcie mięśniowe.",
+      "img": "../assets/rock-treatment.jpg"
     },
     {
       "id": "f2f30656-a786-11ec-b909-0242ac120002",
       "name": "Abhyangam",
       "time": 90,
-      "price": "x",
-      "description": "Tradycyjny masaż ajurwedyjski całego ciała oraz głowy na bazie olejów ziołowych wykorzystujący relaksacyjne techniki masażu oraz ucisk punktów energetycznych. Daje poczucie pełnego relaksu i rozluźnienia, któremu dodatkowo towarzyszy aromat unikalnych olejów ziołowych."
+      "price": 250,
+      "description": "Tradycyjny masaż ajurwedyjski całego ciała oraz głowy na bazie olejów ziołowych wykorzystujący relaksacyjne techniki masażu oraz ucisk punktów energetycznych. Daje poczucie pełnego relaksu i rozluźnienia, któremu dodatkowo towarzyszy aromat unikalnych olejów ziołowych.",
+      "img": "../assets/abhyangam-treatment.jpg"
     },
     {
       "id": "f2f307be-a786-11ec-b909-0242ac120002",
       "name": "Tajski masaż stóp",
       "time": 50,
-      "price": "x",
-      "description": "Dość intensywny masaż stopy i łydki wykonywany dłońmi oraz specjalną pałeczką z drewna różanego na bazie maści rozgrzewającej."
+      "price": 90,
+      "description": "Dość intensywny masaż stopy i łydki wykonywany dłońmi oraz specjalną pałeczką z drewna różanego na bazie maści rozgrzewającej.",
+      "img": "../assets/feet-treatment.jpg"
     },
     {
       "id": "f2f30926-a786-11ec-b909-0242ac120002",
       "name": "SPA & MINERALS - rewitalizująco - ujędrniający zabieg na ciało",
       "time": 60,
-      "price": "x",
-      "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach."
+      "price": 300,
+      "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach.",
+      "img": "../assets/minerals-treatment.jpg"
     },
         {
       "id": "f2f30a7a-a786-11ec-b909-0242ac120002",
       "name": "CHAMPAGNE & TRUFFLE - zabieg rewitalizujący na ciało",
       "time": 120,
-      "price": "x",
-      "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi."
+      "price": 400,
+      "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi.",
+      "img": "../assets/champagne-treatment.jpg"
     },
             {
       "id": "f2f30df4-a786-11ec-b909-0242ac120002",
-      "name": "Aroma Candle Senses",
+      "name": "Eden All senses",
       "time": 100,
-      "price": "x",
-      "description": "Klasyczny masaż całego ciała wykonywany na bazie wosku z gorących aromatycznych świec. Masaż oprócz odprężenia, dzięki właściwościom wosku, wygładza ciało a subtelny aromat rozgrzanego oleju wprowadza w stan relaksu."
+      "price": 140,
+      "description": "Innowacyjne połączenie odnowy ciała z doznaniami na zmysły zapachu, wzroku, słuchu i czucia w Edenie. Elementy zabiegu to: peeling, elementy masażu kosmetycznego na bazie wosku świecy aromatycznej, maska na ciało, nałożenie kremów, 20 minutowy pobyt w Edenie zakończony prysznicem Vichy.",
+      "img": "../assets/aroma-treatment.jpg"
     }
   ],
   "cart": {

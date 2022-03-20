@@ -4,8 +4,8 @@ import { Cart } from "../views/Cart";
 
 export function RemoveFromCartButton(item) {
   return Button({
-    text: "Remove From Cart",
-    classes: "btn btn-primary",
+    text: "x",
+    classes: "btn btn-outline-secondary",
     onClick: () => {
       cartManager.removeItem(item);
       const customEvent = new CustomEvent("navigate", {
