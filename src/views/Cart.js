@@ -1,5 +1,7 @@
 import { cartManager } from "../cart/cart-manager";
+import { InsertFromCartButton } from "../common/InsertFromCartButton";
 import { RemoveFromCartButton } from "../common/RemoveFromCartButton";
+import { SubstractFromCartButton } from "../common/SubstractFromCartButton";
 
 export function Cart() {
   const section = document.createElement("section");
@@ -27,15 +29,20 @@ export function Cart() {
       <td>${item.name}</td>
       <td class="text-center">${item.price} zł</td>
       <td>
-      <div class="input-group" >
-  <button class="btn btn-outline-secondary" type="button" id="button-remove">-</button>
-  <input type="text" class="form-control" value="1">
- <button class="btn btn-outline-secondary" type="button" id="button-add">+</button>
-</div>
+      <div class="input-group"></div>
       </td>
-      <td class="text-center">360 zł</td>
+      <td class="text-center">${item.value * item.price} zł</td>
       <td class="d-flex justify-content-center"></td>
       `;
+
+    const input = document.createElement("input");
+    input.classList.add("form-control");
+    input.setAttribute("value", item.value);
+    tr.querySelector(".input-group").append(
+      SubstractFromCartButton(item, "-", "btn btn-outline-secondary"),
+      input,
+      InsertFromCartButton(item, "+", "btn btn-outline-secondary")
+    );
     tr.lastElementChild.append(RemoveFromCartButton(item));
     return tr;
   });
@@ -45,9 +52,10 @@ export function Cart() {
   <td></td>
   <td></td>
   <td>
+  Wartość zamówienia 
   </td>
   <td>
-  <strong>${cartManager.getTotal().toFixed(2)} zł</strong>
+  ${cartManager.getTotal().toFixed(2)} zł
   </td>
   <td></td>
   `;

@@ -11,10 +11,13 @@ export function TreatmentListItem(treatment) {
             <strong>${treatment.price.toFixed(2)} PLN</strong>
         </p>
         <p>${treatment.description}</p>
+        <img src=${treatment.img}>
     `;
 
   //Add image
 
-  article.append(AddToCartButton(treatment));
+  article.append(
+    AddToCartButton(treatment, "Dodaj do koszyka", "btn btn-secondary")
+  );
   return article;
 }

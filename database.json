@@ -3,6 +3,7 @@
   "rooms": [
     {
       "id": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+ 
       "name": "Pokój Standard",
       "price": 870,
       "property": {
@@ -33,6 +34,7 @@
     },
     {
       "id": "f2f2efe0-a786-11ec-b909-0242ac120002",
+ 
       "name": "Pokój Superior",
       "price": 1070,
       "property": {
@@ -67,6 +69,7 @@
     },
     {
       "id": "f2f2f1d4-a786-11ec-b909-0242ac120002",
+ 
       "name": "Pokój Executive",
       "price": 970,
       "property": {
@@ -100,6 +103,7 @@
     },
     {
       "id": "f2f2f3b4-a786-11ec-b909-0242ac120002",
+ 
       "name": "Apartament Studio",
       "price": 1370,
       "property": {
@@ -135,6 +139,7 @@
     },
     {
       "id": "f2f2f86e-a786-11ec-b909-0242ac120002",
+ 
       "name": "Pokój Superior PLUS",
       "price": 1370,
       "property": {
@@ -169,6 +174,7 @@
     },
     {
       "id": "f2f2f9ea-a786-11ec-b909-0242ac120002",
+ 
       "name": "Apartament Junior",
       "price": 1620,
       "property": {
@@ -203,6 +209,7 @@
     },
     {
       "id": "f2f2fb52-a786-11ec-b909-0242ac120002",
+ 
       "name": "Apartament Senior",
       "price": 1720,
       "property": {
@@ -238,6 +245,7 @@
     },
     {
       "id": "f2f2fcba-a786-11ec-b909-0242ac120002",
+ 
       "name": "Pokój Grand",
       "price": 1920,
       "property": {
@@ -275,14 +283,16 @@
   "treatments": [
     {
       "id": "f2f2fe4a-a786-11ec-b909-0242ac120002",
+ 
       "name": "Masaż głowy",
       "time": 20,
       "price": 100,
       "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami.",
-      "img": "./assets/head-treatment.jpg"
+      "img": "https://www.pexels.com/photo/avocado-salad-11511204/"
     },
     {
       "id": "f2f2ffbc-a786-11ec-b909-0242ac120002",
+ 
       "name": "Masaż Tajski całego ciała",
       "time": 60,
       "price": 220,
@@ -291,6 +301,7 @@
     },
     {
       "id": "f2f30138-a786-11ec-b909-0242ac120002",
+ 
       "name": "Masaż Balijski całego ciała",
       "time": 60,
       "price": 200,
@@ -299,6 +310,7 @@
     },
     {
       "id": "f2f304e4-a786-11ec-b909-0242ac120002",
+ 
       "name": "Masaż SPA gorącymi kamieniami",
       "time": 75,
       "price": 160,
@@ -307,6 +319,7 @@
     },
     {
       "id": "f2f30656-a786-11ec-b909-0242ac120002",
+ 
       "name": "Abhyangam",
       "time": 90,
       "price": 250,
@@ -315,6 +328,7 @@
     },
     {
       "id": "f2f307be-a786-11ec-b909-0242ac120002",
+ 
       "name": "Tajski masaż stóp",
       "time": 50,
       "price": 90,
@@ -323,22 +337,25 @@
     },
     {
       "id": "f2f30926-a786-11ec-b909-0242ac120002",
+ 
       "name": "SPA & MINERALS - rewitalizująco - ujędrniający zabieg na ciało",
       "time": 60,
       "price": 300,
       "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach.",
       "img": "../assets/minerals-treatment.jpg"
     },
-        {
+    {
       "id": "f2f30a7a-a786-11ec-b909-0242ac120002",
+ 
       "name": "CHAMPAGNE & TRUFFLE - zabieg rewitalizujący na ciało",
       "time": 120,
       "price": 400,
       "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi.",
       "img": "../assets/champagne-treatment.jpg"
     },
-            {
+    {
       "id": "f2f30df4-a786-11ec-b909-0242ac120002",
+ 
       "name": "Eden All senses",
       "time": 100,
       "price": 140,
@@ -347,13 +364,7 @@
     }
   ],
   "cart": {
-    "treatments": [
-      {
-        "id": 1,
-        "quantity": 1
-      }
-    ],
-    "rooms": [
+    "product": [
       {
         "id": 1,
         "quantity": 1

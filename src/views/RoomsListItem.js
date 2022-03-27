@@ -27,6 +27,6 @@ export function RoomsListItem(room) {
     })
   );
 
-  li.append(AddToCartButton(room));
+  li.append(AddToCartButton(room, "Dodaj do koszyka", "btn btn-secondary"));
   return li;
 }

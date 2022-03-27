@@ -2,12 +2,12 @@ import { Button } from "./Button";
 import { cartManager } from "../cart/cart-manager";
 import { Cart } from "../views/Cart";
 
-export function RemoveFromCartButton(item) {
+export function SubstractFromCartButton(item, text, classes) {
   return Button({
-    text: "x",
-    classes: "btn btn-outline-secondary",
+    text,
+    classes,
     onClick: () => {
-      cartManager.removeAll(item);
+      cartManager.substractItem(item);
       const customEvent = new CustomEvent("navigate", {
         detail: Cart,
       });
