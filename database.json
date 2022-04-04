@@ -288,7 +288,7 @@
       "time": 20,
       "price": 100,
       "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami.",
-      "img": "https://www.pexels.com/photo/avocado-salad-11511204/"
+      "img": "../assets/aroma-treatment.jpg"
     },
     {
       "id": "f2f2ffbc-a786-11ec-b909-0242ac120002",
@@ -306,7 +306,7 @@
       "time": 60,
       "price": 200,
       "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała.",
-      "img": "./assets/balinese-treatment.jpg"
+      "img": "../assets/balinese-treatment.jpg"
     },
     {
       "id": "f2f304e4-a786-11ec-b909-0242ac120002",

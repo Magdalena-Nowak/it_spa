@@ -1,7 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+$darkGray: #293b44;
+$lightBrown: #9f928b;
+$light: #fffffd;
+$mainFont: "Forum", cursive;
+$fontColor: #62717b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .body {
-    background-color: rgb(236, 233, 221);
+  color: $fontColor;
+  background-color: $light;
+  font-size: 10px;
+  font-family: $mainFont;
 }
 
 .cart__quantity {
-    width: 10rem;
+  width: 10rem;
 }
