@@ -4,12 +4,14 @@ import { Button } from "../common/Button";
 import "./navigation.scss";
 import { TreatmentsList } from "../views/TreatmentsList";
 import { Cart } from "../views/Cart";
+import { Calendar } from "../views/Calendar";
 
 const navItems = [
   { name: "Home", component: Home },
   { name: "Rooms", component: RoomsList },
   { name: "Treatments", component: TreatmentsList },
   { name: "Cart", component: Cart },
+  { name: "Calendar", component: Calendar },
 ];
 
 export function Navigation() {
