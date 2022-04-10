@@ -1,6 +1,8 @@
 import "./calendar.scss";
 
 export function Calendar() {
+  const daysList = ["pon", "wto", "śro", "czw", "pią", "sob", "nie"];
+
   const section = document.createElement("section");
   section.classList.add("calendar__wrapper");
 
@@ -39,6 +41,17 @@ export function Calendar() {
   // function crateBodyElements() {
   const body = document.createElement("div");
   body.classList.add("calendar__body");
+
+  const week = document.createElement("div");
+  week.classList.add("calendar__body-week");
+
+  for (let j = 0; j < daysList.length; j++) {
+    const weekDay = document.createElement("div");
+    weekDay.classList.add("calendar__body-week");
+    weekDay.innerHTML = daysList[j];
+
+    body.append(weekDay);
+  }
 
   for (let i = 1; i <= 31; i++) {
     const day = document.createElement("div");
