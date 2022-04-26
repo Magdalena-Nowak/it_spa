@@ -5,13 +5,17 @@ import "./navigation.scss";
 import { TreatmentsList } from "../views/TreatmentsList";
 import { Cart } from "../views/Cart";
 import { Calendar } from "../views/Calendar";
+import { Login } from "../views/Login";
+import { Register } from "../views/Register";
 
 const navItems = [
   { name: "Home", component: Home },
-  { name: "Rooms", component: RoomsList },
-  { name: "Treatments", component: TreatmentsList },
-  { name: "Cart", component: Cart },
-  { name: "Calendar", component: Calendar },
+  { name: "Pokoje", component: RoomsList },
+  { name: "Zabiegi", component: TreatmentsList },
+  { name: "Koszyk", component: Cart },
+  { name: "Kalendarz", component: Calendar },
+  { name: "Logowanie", component: Login },
+  { name: "Rejestracja", component: Register },
 ];
 
 export function Navigation() {
@@ -23,10 +27,7 @@ export function Navigation() {
   const navbarBrand = document.createElement("div");
   navbarBrand.classList.add("navbar-brand");
 
-  const logo = document.createElement("img");
-  logo.src = require("../assets/luxurious.png");
-
-  navbarBrand.append(logo);
+  navbarBrand.innerHTML = `<h1 class="brand">IT Spa</h1>`;
 
   const togglerBtn = document.createElement("button");
   togglerBtn.classList.add("navbar-toggler");
