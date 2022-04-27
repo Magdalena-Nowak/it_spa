@@ -1,7 +1,6 @@
 import { Home } from "../views/Home";
 import { RoomsList } from "../views/RoomsList";
 import { Button } from "../common/Button";
-import "./navigation.scss";
 import { TreatmentsList } from "../views/TreatmentsList";
 import { Cart } from "../views/Cart";
 import { Calendar } from "../views/Calendar";

@@ -1,5 +1,3 @@
-import "./login.scss";
-
 export function Login() {
   const section = document.createElement("section");
 

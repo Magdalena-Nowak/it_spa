@@ -1,5 +1,3 @@
-import "./home.scss";
-
 export function Home() {
   const section = document.createElement("section");
   const img = document.createElement("img");

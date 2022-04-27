@@ -1,124 +1,68 @@
-import "./register.scss";
+const axios = require("axios");
 
 export function Register() {
-  let validEmail = false;
-  let validPassword = false;
-  let validConfirmPassword = false;
   const section = document.createElement("section");
+  section.classList.add("main-section");
 
-  const registerWrapper = document.createElement("div");
-  registerWrapper.classList.add("register-wrapper");
-
-  const registerBox = document.createElement("div");
-  registerBox.classList.add("register-box");
+  section.innerHTML = `<header>
+  <h2>Rejestracja</h2>
+  <div class="form-container"></div>
+  </header>`;
 
   const form = document.createElement("form");
-  form.classList.add("form");
+  form.innerHTML = `
+  <form class="was-validated">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Wpisz email" required>
+  </div>
+  <div class="form-group password-wrapper">
+    <label for="password">Hasło</label>
+    <input type="password" class="form-control" id="password" placeholder="Wpisz hasło" required>
+    <small id="passwordHelp" class="form-text text-muted">Hasło musi mieć min. 8 znaków, jedną dużą literę, jedną małą literę, cyfrę oraz znak specjalny.</small>
+  </div>
+  <div class="form-group confirm-password-wrapper">
+    <label for="confirmPassword">Potwierdź hasło</label>
+    <input type="password" class="form-control" id="confirmPassword" placeholder="Potwierdź hasło" required>
+    <div class="invalid-feedback">Hasła nie są zgodne.</div>
+  </div>
+  <button type="submit" id="register" class="btn btn-primary">Submit</button>
+</form>`;
 
-  const title = document.createElement("h3");
-  title.classList.add("my-3");
-  title.textContent = "Rejestracja";
+  const popup = document.createElement("div");
+  popup.classList.add("popup");
+  popup.innerHTML = `<p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>`;
+  // container.classList.add("popup-container");
+  // container.innerHTML = `<div class="popup card">
+  //       <p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>
+  //       </div>`;
 
-  const emailWrapper = document.createElement("div");
-  emailWrapper.classList.add("form-group", "my-2", "needs-validation");
+  section.append(popup);
+  section.querySelector(".form-container").append(form);
 
-  const emailLabel = document.createElement("label");
-  emailLabel.classList.add("my-1");
-  emailLabel.setAttribute("for", "email");
-  emailLabel.textContent = "E-mail";
-
-  const emailInput = document.createElement("input");
-  emailInput.classList.add("form-control");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("id", "email");
-  emailInput.setAttribute("placeholder", "E-mail");
-  emailInput.setAttribute("requaired", "true");
-
-  const emailAlert = document.createElement("p");
-  emailAlert.classList.add("error-message", "p-1", "my-2");
-  emailAlert.setAttribute("id", "email-alert");
-
-  emailWrapper.append(emailLabel, emailInput, emailAlert);
-
-  const passwordWrapper = document.createElement("div");
-  passwordWrapper.classList.add("form-group", "my-2");
-
-  const passwordLabel = document.createElement("label");
-  passwordLabel.classList.add("my-1");
-  passwordLabel.setAttribute("for", "password");
-  passwordLabel.textContent = "Password";
-
-  const passwordInput = document.createElement("input");
-  passwordInput.classList.add("form-control");
-  passwordInput.setAttribute("type", "password");
-  passwordInput.setAttribute("id", "password");
-  passwordInput.setAttribute("placeholder", "Hasło");
-  passwordInput.setAttribute("requaired", "true");
-
-  const passwordAlert = document.createElement("p");
-  passwordAlert.classList.add("error-message", "p-1", "m-2");
-  passwordAlert.setAttribute("id", "password-alert");
-
-  passwordWrapper.append(passwordLabel, passwordInput, passwordAlert);
-
-  const confirmPasswordWrapper = document.createElement("div");
-  confirmPasswordWrapper.classList.add("form-group", "my-2");
-
-  const confirmPasswordLabel = document.createElement("label");
-  confirmPasswordLabel.classList.add("my-1");
-  confirmPasswordLabel.setAttribute("for", "confirmPassword");
-  confirmPasswordLabel.textContent = "Potwierdź hasło";
-
-  const confirmPasswordInput = document.createElement("input");
-  confirmPasswordInput.classList.add("form-control");
-  confirmPasswordInput.setAttribute("type", "password");
-  confirmPasswordInput.setAttribute("id", "confirm-password");
-  confirmPasswordInput.setAttribute("placeholder", "Powtórz hasło");
-  confirmPasswordInput.setAttribute("requaired", "true");
-
-  const confirmPasswordAlert = document.createElement("p");
-  confirmPasswordAlert.classList.add("error-message", "p-1", "my-2");
-  confirmPasswordAlert.setAttribute("id", "confirm-password-alert");
-
-  confirmPasswordWrapper.append(
-    confirmPasswordLabel,
-    confirmPasswordInput,
-    confirmPasswordAlert
-  );
-
-  const registerBtn = document.createElement("button");
-  registerBtn.classList.add("btn", "my-2");
-  registerBtn.textContent = "Zarejstruj się";
-
-  emailInput.addEventListener("input", () => {
-    emailInput.classList.remove("is-valid");
-    emailInput.classList.remove("is-invalid");
-    const emailValue = emailInput.value;
-    const emailRegex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (emailValue.toLowerCase().match(emailRegex)) {
-      emailAlert.style.display = "none";
-      emailInput.classList.add("is-valid");
-      validEmail = true;
-    } else {
-      emailInput.classList.add("is-invalid");
-      emailAlert.textContent = "Nieprawidłowy adres e-mail";
-      emailAlert.style.display = "block";
-    }
-  });
-
+  const passwordInput = section.querySelector("#password");
+  const emailInput = section.querySelector("#email");
+  const confirmPasswordInput = section.querySelector("#confirmPassword");
+  const submitBtn = section.querySelector("#register");
+  let validPassword = false;
+  let validConfirmPassword = false;
+  let validEmail = false;
   passwordInput.addEventListener("input", () => {
-    if (passwordWrapper.querySelector(".progress-wrapper")) {
-      passwordWrapper.lastElementChild.innerHTML = "";
+    const isProgressBar = section.querySelector(".progress-wrapper")
+      ? true
+      : false;
+    if (isProgressBar) {
+      section.querySelector(".password-wrapper").lastElementChild.innerHTML =
+        "";
     }
 
     const strengthMeter = document.createElement("div");
     strengthMeter.classList.add("progress-wrapper");
     strengthMeter.innerHTML = `<div class="progress mt-2">
-  <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>`;
+    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>`;
 
-    passwordWrapper.append(strengthMeter);
+    section.querySelector(".password-wrapper").append(strengthMeter);
 
     let strength = 0;
     passwordInput.classList.remove("is-valid");
@@ -143,13 +87,14 @@ export function Register() {
       strength++;
     }
 
-    const progressBar = strengthMeter.firstElementChild.firstElementChild;
+    const progressBar = strengthMeter.querySelector(".progress-bar");
     progressBar.classList.remove(
       "bg-success",
       "bg-info",
       "bg-warning",
       "bg-danger"
     );
+
     switch (strength) {
       case 1:
         progressBar.style.width = "25%";
@@ -174,51 +119,68 @@ export function Register() {
     }
 
     if (passwordValue.match(passwordRegex)) {
-      passwordAlert.style.display = "none";
       passwordInput.classList.add("is-valid");
       validPassword = true;
     } else {
+      validPassword = false;
       passwordInput.classList.add("is-invalid");
-      passwordAlert.textContent =
-        "Hasło musi mieć min. 8 znaków, w tym małą literę, wielką literę, cyfrę oraz znak specjalny(!@#$%^&*_)";
-      passwordAlert.style.display = "block";
     }
   });
 
   confirmPasswordInput.addEventListener("input", () => {
-    confirmPasswordInput.classList.remove("is-valid");
     confirmPasswordInput.classList.remove("is-invalid");
-    const passwordValue = passwordInput.value;
-    const confirmPasswordValue = confirmPasswordInput.value;
-    if (passwordValue === confirmPasswordValue) {
-      confirmPasswordAlert.style.display = "none";
+    if (passwordInput.value === confirmPasswordInput.value) {
       confirmPasswordInput.classList.add("is-valid");
       validConfirmPassword = true;
     } else {
       confirmPasswordInput.classList.add("is-invalid");
-      confirmPasswordAlert.textContent = "Hasła nie są zgodne";
-      confirmPasswordAlert.style.display = "block";
+      validConfirmPassword = false;
     }
   });
 
-  registerBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (validEmail && validPassword && validConfirmPassword) {
-      console.log("submit");
+  emailInput.addEventListener("input", () => {
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    if (emailInput.value.match(emailRegex) && emailInput.value !== "") {
+      validEmail = true;
     } else {
-      console.log("error");
+      validEmail = false;
     }
   });
 
-  form.append(
-    title,
-    emailWrapper,
-    passwordWrapper,
-    confirmPasswordWrapper,
-    registerBtn
-  );
-  registerBox.append(form);
-  registerWrapper.append(registerBox);
-  section.append(registerWrapper);
+  submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (validEmail && validPassword && validConfirmPassword) {
+      axios.get("http://localhost:3000/users").then((response) => {
+        const existedUser = response.data.find(
+          (item) => item.email === emailInput.value
+        );
+
+        if (existedUser) {
+          popup.style.display = "flex";
+
+          setTimeout(() => {
+            popup.style.display = "none";
+            passwordInput.value = "";
+            confirmPasswordInput.value = "";
+            section.querySelector(
+              ".password-wrapper"
+            ).lastElementChild.innerHTML = "";
+          }, 2000);
+        } else {
+          const newUser = {
+            email: emailInput.value,
+            password: passwordInput.value,
+          };
+        }
+
+        passwordInput.value = "";
+        confirmPasswordInput.value = "";
+        section.querySelector(".password-wrapper").lastElementChild.innerHTML =
+          "";
+      });
+    }
+  });
+
   return section;
 }

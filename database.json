@@ -1,5 +1,9 @@
 {
-  "users": [],
+  "users": [
+    {"email": "mn@o2.pl",
+    "password": "Mnowak25!"
+    }
+  ],
   "rooms": [
     {
       "id": "1f2f2ec7a-a786-11ec-b909-0242ac120002",

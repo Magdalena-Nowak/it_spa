@@ -1,5 +1,3 @@
-import "./calendar.scss";
-
 export function Calendar() {
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = [
