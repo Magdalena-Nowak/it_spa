@@ -1,3 +1,4 @@
+const axios = require("axios");
 import { TreatmentListItem } from "./TreatmentListItem";
 
 export function TreatmentsList() {
@@ -8,16 +9,13 @@ export function TreatmentsList() {
     <header>Loading...</header>
     `;
 
-  fetch("http://localhost:3000/treatments")
-    .then((response) => response.json())
-    .then((treatments) => {
-      const articles = treatments.map((treatment) =>
-        TreatmentListItem(treatment)
-      );
-
-      section.querySelector("header").remove();
-      section.append(...articles);
-    });
+  axios.get("http://localhost:3000/treatments").then((response) => {
+    const articles = response.data.map((treatment) =>
+      TreatmentListItem(treatment)
+    );
+    section.querySelector("header").remove();
+    section.append(...articles);
+  });
 
   return section;
 }

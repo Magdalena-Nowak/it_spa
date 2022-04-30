@@ -1,3 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@800&family=Bree+Serif&family=Forum&family=Suez+One&display=swap");
+
+$darkGray: #293b44;
+$lightBrown: #9f928b;
+$light: #fffffd;
+$mainFont: "Forum", cursive;
+$fontColor: #62717b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .body {
-    background-color: rgb(236, 233, 221);
+  color: $fontColor;
+  background-color: $light;
+  font-size: 10px;
+  font-family: $mainFont;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__quantity {
+  width: 10rem;
+}
+
+.calendar {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+  }
+  &__container {
+    width: 400px;
+    height: 300px;
+    background-color: #fffffd;
+  }
+  &__header {
+    background-color: #293b44;
+    color: #fffffd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    &-date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-month,
+      &-year {
+        padding: 0 8px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    background-color: #fffffd;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    &-day {
+      border: 1px solid rgba(41, 59, 68, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(41, 59, 68);
+        color: #fffffd;
+      }
+      &--previous,
+      &--next {
+        color: gray;
+      }
+    }
+    &-week {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      background-color: rgb(41, 59, 68);
+      color: #fffffd;
+    }
+  }
+  &__weekdays {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+.current-day {
+  background-color: #293b44;
+  color: white;
+}
+
+.fa-solid {
+  font-size: 15px;
+  margin: 0 10px;
+  color: #fffffd;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.start-date {
+  background-color: #293b44;
+  color: #fffffd;
+}
+
+// h1 {
+//   font-weight: bold;
+//   font-size: 3em;
+//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+// }
+
+// span {
+//   color: rgb(141, 14, 130);
+// }
+
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.login-box {
+  width: 350px;
+  height: 400px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+// .form {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .btn {
+//   background-color: #293b44;
+//   color: white;
+// }
+
+// .btn {
+//   border-radius: 0;
+//   transition: all 0.4s ease-in-out;
+// }
+
+// .btn-check:focus + .btn,
+// .btn:focus {
+//   box-shadow: none;
+// }
+
+// .btn:hover {
+//   color: white;
+//   background-color: #445963;
+// }
+
+.forgot-link {
+  cursor: pointer;
+  text-align: end;
+  text-decoration: underline;
+}
+
+// h1 {
+//   font-weight: bold;
+//   font-size: 3em;
+//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+// }
+
+// span {
+//   color: rgb(141, 14, 130);
+// }
+
+// .btn {
+//   background-color: #293b44;
+//   color: white;
+// }
+
+// .btn {
+//   border-radius: 0;
+//   transition: all 0.4s ease-in-out;
+// }
+
+// .btn-check:focus + .btn,
+// .btn:focus {
+//   box-shadow: none;
+// }
+
+// .btn:hover {
+//   color: white;
+//   background-color: #445963;
+// }
+
+#confirm-password-alert,
+#password-alert,
+#email-alert,
+#username-alert {
+  display: none;
+}
+
+.error-message {
+  color: rgb(183, 8, 8);
+}
+
+.bg-danger {
+  background-color: #ea515f !important;
+}
+.bg-warning {
+  background-color: #fea802 !important;
+}
+.bg-info {
+  background-color: #138e90 !important;
+}
+.bg-success {
+  background-color: #168f5f !important;
+}
+
+// .btn-active {
+//   background-color: #293b44;
+//   color: white;
+// }
+
+// .btn {
+//   border-radius: 0;
+//   transition: all 0.4s ease-in-out;
+// }
+
+// .btn-check:focus + .btn,
+// .btn:focus {
+//   box-shadow: none;
+// }
+
+// .btn:hover {
+//   color: white;
+//   background-color: #293b44;
+// }
+
+// .btn-link {
+//   text-decoration: none;
+//   color: #293b44;
+// }
+
+// .btn-link.btn-active {
+//   color: white;
+// }
+
+nav {
+  min-height: 15vh;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.brand {
+  font-family: "BioRhyme Expanded", serif;
+  font-size: 28px;
+  color: #293b44;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.alert-danger {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
