@@ -1,4 +1,6 @@
 import { Home } from "../views/Home";
+import { Login } from "../views/Login";
+
 const axios = require("axios");
 
 export function Register() {
@@ -35,7 +37,8 @@ export function Register() {
       <input type="password" class="form-control" id="confirmPassword" placeholder="Potwierdź hasło" required>
       <div class="invalid-feedback"></div>
     </div>
-    <button type="submit" id="register" class="btn btn-primary my-3">Submit</button>`;
+    <div class="login-link">Wróć do strony logowania<div>
+    <button type="submit" id="register" class="btn btn-primary my-3">Zarejstruj się</button>`;
 
   section.querySelector(".form-container").append(form);
 
@@ -162,7 +165,6 @@ export function Register() {
 
         if (existedUser) {
           const alertMessage = document.querySelector(".alert-danger");
-
           alertMessage.style.display = "flex";
 
           setTimeout(() => {
@@ -205,6 +207,11 @@ export function Register() {
     }
   });
 
-  console.log(document.querySelector("main"));
+  const loginLink = form.querySelector(".login-link");
+  loginLink.addEventListener("click", () => {
+    const main = document.querySelector("main");
+    main.innerHTML = "";
+    main.append(Login());
+  });
   return section;
 }

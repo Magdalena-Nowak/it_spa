@@ -5,7 +5,6 @@ import { TreatmentsList } from "../views/TreatmentsList";
 import { Cart } from "../views/Cart";
 import { Calendar } from "../views/Calendar";
 import { Login } from "../views/Login";
-import { Register } from "../views/Register";
 
 const navItems = [
   { name: "Home", component: Home },
@@ -13,44 +12,27 @@ const navItems = [
   { name: "Zabiegi", component: TreatmentsList },
   { name: "Koszyk", component: Cart },
   { name: "Kalendarz", component: Calendar },
-  { name: "Logowanie", component: Login },
-  { name: "Rejestracja", component: Register },
+  { name: `<i class="fa-solid fa-user"></i>`, component: Login },
 ];
 
 export function Navigation() {
   const navigation = document.createElement("nav");
-  navigation.classList.add("navbar");
-  navigation.classList.add("navbar-expand-lg");
-  navigation.classList.add("navbar-light");
-
-  const navbarBrand = document.createElement("div");
-  navbarBrand.classList.add("navbar-brand");
-
-  navbarBrand.innerHTML = `<h1 class="brand">IT Spa</h1>`;
-
-  const togglerBtn = document.createElement("button");
-  togglerBtn.classList.add("navbar-toggler");
-  togglerBtn.setAttribute("type", "button");
-  togglerBtn.setAttribute("data-toggle", "collapse");
-  togglerBtn.setAttribute("data-target", "#navbarNav");
-  togglerBtn.setAttribute("aria-controls", "navbarNav");
-  togglerBtn.setAttribute("collapse", "false");
-
-  const togglerIcon = document.createElement("span");
-  togglerIcon.classList.add("navbar-toggler-icon");
-
-  togglerBtn.append(togglerIcon);
-
-  const navbarCollapse = document.createElement("div");
-  navbarCollapse.classList.add("collapse");
-  navbarCollapse.classList.add("navbar-collapse");
-  navbarCollapse.setAttribute("id", "navbarNav");
-
-  const navbarList = document.createElement("ul");
-  navbarList.classList.add("navbar-nav");
-  navbarList.classList.add("mr-auto");
-
-  navbarCollapse.append(navbarList);
+  navigation.classList.add(
+    "navbar",
+    "navbar-expand-lg",
+    "navbar-light",
+    "bg-light"
+  );
+  navigation.innerHTML = `
+  <a class="navbar-brand" href="#"><h1 class="brand">IT Spa</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    </ul>
+  </div>
+  `;
 
   const navButtons = navItems.map((item) => {
     const listItem = document.createElement("li");
@@ -59,7 +41,7 @@ export function Navigation() {
     listItem.append(
       Button({
         text: item.name,
-        classes: "btn btn-link mx-3 my-4",
+        classes: "mx-3 my-4 btn",
         onClick: (event) => {
           const allBtns = event.target.parentElement.parentElement.children;
 
@@ -79,29 +61,8 @@ export function Navigation() {
     return listItem;
   });
 
-  navbarBrand.addEventListener("click", (event) => {
-    const home = navItems.find((item) => item.name === "Home");
-    const customEvent = new CustomEvent("navigate", {
-      detail: home.component,
-    });
-    document.body.dispatchEvent(customEvent);
-
-    const allBtns =
-      event.target.parentElement.parentElement.lastElementChild
-        .firstElementChild.children;
-
-    Array.from(allBtns).forEach((element, index) => {
-      element.firstElementChild.classList.remove("btn-active");
-
-      if (index === 0) {
-        element.firstElementChild.classList.add("btn-active");
-      }
-    });
-  });
-
+  const navbarList = navigation.querySelector(".navbar-nav");
   navbarList.append(...navButtons);
 
-  navButtons[0].firstElementChild.classList.add("btn-active");
-  navigation.append(navbarBrand, togglerBtn, navbarCollapse);
   return navigation;
 }
