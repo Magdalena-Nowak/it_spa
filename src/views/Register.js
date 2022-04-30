@@ -1,43 +1,42 @@
+import { Home } from "../views/Home";
 const axios = require("axios");
 
 export function Register() {
   const section = document.createElement("section");
-  section.classList.add("main-section");
 
-  section.innerHTML = `<header>
-  <h2>Rejestracja</h2>
+  section.innerHTML = `
+  <header>
+    <h2 class="my-3">Rejestracja</h2>
+  </header>
   <div class="form-container"></div>
-  </header>`;
+  <p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>
+  `;
 
   const form = document.createElement("form");
+  form.classList.add(
+    "needs-validation",
+    "d-flex",
+    "flex-column",
+    "justify-content-center"
+  );
+
   form.innerHTML = `
-  <form class="was-validated">
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="Wpisz email" required>
-  </div>
-  <div class="form-group password-wrapper">
-    <label for="password">Hasło</label>
-    <input type="password" class="form-control" id="password" placeholder="Wpisz hasło" required>
-    <small id="passwordHelp" class="form-text text-muted">Hasło musi mieć min. 8 znaków, jedną dużą literę, jedną małą literę, cyfrę oraz znak specjalny.</small>
-  </div>
-  <div class="form-group confirm-password-wrapper">
-    <label for="confirmPassword">Potwierdź hasło</label>
-    <input type="password" class="form-control" id="confirmPassword" placeholder="Potwierdź hasło" required>
-    <div class="invalid-feedback">Hasła nie są zgodne.</div>
-  </div>
-  <button type="submit" id="register" class="btn btn-primary">Submit</button>
-</form>`;
+    <div class="form-group my-2">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Wpisz email" required>
+    </div>
+    <div class="form-group password-wrapper my-2">
+      <label for="password">Hasło</label>
+      <input type="password" class="form-control" id="password" placeholder="Wpisz hasło" required>
+      <small id="passwordHelp" class="form-text text-muted">Hasło musi mieć min. 8 znaków, jedną dużą literę, jedną małą literę, cyfrę oraz znak specjalny.</small>
+    </div>
+    <div class="form-group confirm-password-wrapper my-2">
+      <label for="confirmPassword">Potwierdź hasło</label>
+      <input type="password" class="form-control" id="confirmPassword" placeholder="Potwierdź hasło" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    <button type="submit" id="register" class="btn btn-primary my-3">Submit</button>`;
 
-  const popup = document.createElement("div");
-  popup.classList.add("popup");
-  popup.innerHTML = `<p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>`;
-  // container.classList.add("popup-container");
-  // container.innerHTML = `<div class="popup card">
-  //       <p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>
-  //       </div>`;
-
-  section.append(popup);
   section.querySelector(".form-container").append(form);
 
   const passwordInput = section.querySelector("#password");
@@ -47,6 +46,7 @@ export function Register() {
   let validPassword = false;
   let validConfirmPassword = false;
   let validEmail = false;
+
   passwordInput.addEventListener("input", () => {
     const isProgressBar = section.querySelector(".progress-wrapper")
       ? true
@@ -58,9 +58,10 @@ export function Register() {
 
     const strengthMeter = document.createElement("div");
     strengthMeter.classList.add("progress-wrapper");
-    strengthMeter.innerHTML = `<div class="progress mt-2">
-    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>`;
+    strengthMeter.innerHTML = `
+    <div class="progress my-2">
+      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>`;
 
     section.querySelector(".password-wrapper").append(strengthMeter);
 
@@ -139,9 +140,11 @@ export function Register() {
   });
 
   emailInput.addEventListener("input", () => {
+    emailInput.classList.remove("is-invalid");
     const emailRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     if (emailInput.value.match(emailRegex) && emailInput.value !== "") {
+      emailInput.classList.add("is-valid");
       validEmail = true;
     } else {
       validEmail = false;
@@ -150,6 +153,7 @@ export function Register() {
 
   submitBtn.addEventListener("click", (event) => {
     event.preventDefault();
+
     if (validEmail && validPassword && validConfirmPassword) {
       axios.get("http://localhost:3000/users").then((response) => {
         const existedUser = response.data.find(
@@ -157,12 +161,12 @@ export function Register() {
         );
 
         if (existedUser) {
-          popup.style.display = "flex";
+          const alertMessage = document.querySelector(".alert-danger");
+
+          alertMessage.style.display = "flex";
 
           setTimeout(() => {
-            popup.style.display = "none";
-            passwordInput.value = "";
-            confirmPasswordInput.value = "";
+            alertMessage.style.display = "none";
             section.querySelector(
               ".password-wrapper"
             ).lastElementChild.innerHTML = "";
@@ -172,15 +176,35 @@ export function Register() {
             email: emailInput.value,
             password: passwordInput.value,
           };
+          axios
+            .post("http://localhost:3000/users", newUser)
+            .then(function (response) {
+              emailInput.value = "";
+              const main = document.querySelector("main");
+              main.innerHTML = "";
+              main.append(Home());
+            })
+            .catch(function (error) {
+              console.log(error.toJSON());
+            });
         }
 
         passwordInput.value = "";
         confirmPasswordInput.value = "";
+
+        emailInput.classList.remove("is-valid");
+        passwordInput.classList.remove("is-valid");
+        confirmPasswordInput.classList.remove("is-valid");
         section.querySelector(".password-wrapper").lastElementChild.innerHTML =
           "";
       });
+    } else {
+      emailInput.classList.add("is-invalid");
+      passwordInput.classList.add("is-invalid");
+      confirmPasswordInput.classList.add("is-invalid");
     }
   });
 
+  console.log(document.querySelector("main"));
   return section;
 }

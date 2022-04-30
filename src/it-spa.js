@@ -5,6 +5,7 @@ import { Home } from "./views/Home";
 import { Navigation } from "./navigation/Navigation";
 
 const main = document.querySelector("main");
+main.classList.add("container");
 const navigation = document.querySelector("header");
 navigation.classList.add("container");
 navigation.append(Navigation());
