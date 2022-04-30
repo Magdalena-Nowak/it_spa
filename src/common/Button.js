@@ -4,7 +4,7 @@ export function Button(options) {
   const button = document.createElement("button");
 
   button.setAttribute("type", "button");
-  button.innerText = text;
+  button.innerHTML = text;
   button.className = classes;
   button.addEventListener("click", onClick);
 
