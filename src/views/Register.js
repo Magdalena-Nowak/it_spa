@@ -5,10 +5,10 @@ const axios = require("axios");
 
 export function Register() {
   const section = document.createElement("section");
-
+  section.classList.add("register__section");
   section.innerHTML = `
   <header>
-    <h2 class="my-3">Rejestracja</h2>
+    <h2 class="text-center my-3">Rejestracja</h2>
   </header>
   <div class="form-container"></div>
   <p class="alert alert-danger" role="alert">Istnieje już konto z takim adresem email.</p>
@@ -37,7 +37,7 @@ export function Register() {
       <input type="password" class="form-control" id="confirmPassword" placeholder="Potwierdź hasło" required>
       <div class="invalid-feedback"></div>
     </div>
-    <div class="login-link">Wróć do strony logowania<div>
+    <div class="login-link">Wróć do strony logowania</div>
     <button type="submit" id="register" class="btn btn-primary my-3">Zarejstruj się</button>`;
 
   section.querySelector(".form-container").append(form);
