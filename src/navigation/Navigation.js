@@ -77,7 +77,7 @@ export function Navigation() {
     Array.from(allBtns).forEach((element) =>
       element.firstElementChild.classList.remove("btn-active")
     );
-
+    allBtns[0].firstElementChild.classList.add("btn-active");
     const customEvent = new CustomEvent("navigate", {
       detail: Home,
     });
