@@ -4,10 +4,11 @@ const axios = require("axios");
 
 export function Login() {
   const section = document.createElement("section");
+  section.classList.add("login__section");
 
   section.innerHTML = `
   <header>
-    <h2 class="my-3">Logowanie</h2>
+    <h2 class="text-center my-3">Logowanie</h2>
   </header>
   <div class="form-container"></div>
   <div class="login-popup-bg">

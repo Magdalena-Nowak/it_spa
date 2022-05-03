@@ -3,7 +3,6 @@ import { RoomsList } from "../views/RoomsList";
 import { Button } from "../common/Button";
 import { TreatmentsList } from "../views/TreatmentsList";
 import { Cart } from "../views/Cart";
-import { Calendar } from "../views/Calendar";
 import { Login } from "../views/Login";
 
 const navItems = [
@@ -11,8 +10,7 @@ const navItems = [
   { name: "Pokoje", component: RoomsList },
   { name: "Zabiegi", component: TreatmentsList },
   { name: "Koszyk", component: Cart },
-  { name: "Kalendarz", component: Calendar },
-  { name: `<i class="fa-solid fa-user"></i>`, component: Login },
+  { name: `<i class="fa-solid fa-user"></i> Konto`, component: Login },
 ];
 
 export function Navigation() {
@@ -24,13 +22,24 @@ export function Navigation() {
     "bg-light"
   );
   navigation.innerHTML = `
-  <a class="navbar-brand" href="#"><h1 class="brand">IT Spa</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-    </ul>
+  <div class="container-fluid">
+    <h1 class="navbar-brand" href="#">
+      IT Spa
+    </h1>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav"></ul>
+    </div>
   </div>
   `;
 
@@ -59,6 +68,21 @@ export function Navigation() {
       })
     );
     return listItem;
+  });
+  const navbarBrand = navigation.querySelector(".navbar-brand");
+
+  navbarBrand.addEventListener("click", () => {
+    const allBtns = navigation.querySelectorAll(".nav-item");
+
+    Array.from(allBtns).forEach((element) =>
+      element.firstElementChild.classList.remove("btn-active")
+    );
+
+    const customEvent = new CustomEvent("navigate", {
+      detail: Home,
+    });
+
+    document.body.dispatchEvent(customEvent);
   });
 
   const navbarList = navigation.querySelector(".navbar-nav");

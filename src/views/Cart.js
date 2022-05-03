@@ -5,8 +5,8 @@ import { SubstractFromCartButton } from "../common/SubstractFromCartButton";
 
 export function Cart() {
   const section = document.createElement("section");
-  section.innerHTML = `<h2>Cart</h2>
-    <p>Zawartość Twojego koszyka</p>`;
+  section.innerHTML = `<h2 class="text-center">Cart</h2>
+    <p class="text-center">Zawartość Twojego koszyka</p>`;
   const table = document.createElement("table");
   table.classList.add("table", "align-middle");
 
@@ -32,7 +32,7 @@ export function Cart() {
       <div class="input-group"></div>
       </td>
       <td class="text-center">${item.value * item.price} zł</td>
-      <td class="d-flex justify-content-center"></td>
+      <td></td>
       `;
 
     const input = document.createElement("input");
@@ -50,8 +50,7 @@ export function Cart() {
   const tableFooter = document.createElement("tr");
   tableFooter.innerHTML = `
   <td></td>
-  <td></td>
-  <td>
+  <td colspan="2">
   Wartość zamówienia 
   </td>
   <td>

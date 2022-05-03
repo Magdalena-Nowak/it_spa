@@ -4,7 +4,7 @@ import { Button } from "../common/Button";
 
 const backButton = Button({
   text: "Wróć do listy",
-  classes: "btn btn-primary",
+  classes: "btn btn-primary py-2 px-3 my-2",
   onClick: () => {
     const customEvent = new CustomEvent("navigate", {
       detail: RoomsList,

@@ -15,7 +15,7 @@
     {
       "id": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
       "name": "Pokój Standard",
-      "price": 870,
+      "price": 400,
       "property": {
         "guests": 2,
         "beds": "2 x pojedyncze",
@@ -34,18 +34,12 @@
         "suszarka do włosów",
         "szlafrok i kapcie"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Łazienka z prysznicem, dwa łóżka lub łoże małżeńskie, dodatkowa rozkładana sofa. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2efe0-a786-11ec-b909-0242ac120002",
       "name": "Pokój Superior",
-      "price": 1070,
+      "price": 570,
       "property": {
         "guests": 3,
         "beds": [
@@ -68,18 +62,12 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Łazienka z wanną i prysznicem, łoże małżeńskie, dodatkowa rozkładana sofa. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2f1d4-a786-11ec-b909-0242ac120002",
       "name": "Pokój Executive",
-      "price": 970,
+      "price": 570,
       "property": {
         "guests": 2,
         "beds": [
@@ -101,18 +89,12 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Łazienka z wanną i prysznicem, łoże małżeńskie. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2f3b4-a786-11ec-b909-0242ac120002",
       "name": "Apartament Studio",
-      "price": 1370,
+      "price": 600,
       "property": {
         "guests": 3,
         "beds": [
@@ -136,52 +118,12 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Pokój główny z łożem małżeńskim oraz kącikiem wypoczynkowym z rozkładaną sofą. Wydzielona jednoosobowa sypialnia. Taras z krzesłami i stolikiem. Wszystkie pokoje dla niepalących."
-    },
-    {
-      "id": "f2f2f86e-a786-11ec-b909-0242ac120002",
-      "name": "Pokój Superior PLUS",
-      "price": 1370,
-      "property": {
-        "guests": 4,
-        "beds": [
-          "1 x podwójne",
-          "2 x pojedyncze"
-        ],
-        "balcony": "Tak",
-        "area": 48,
-        "view": "Na las / na polanką"
-      },
-      "facilities": [
-        "bezprzewodowy, bezpłatny internet",
-        "klimatyzacja",
-        "telefon",
-        "telewizja satelitarna",
-        "sejf",
-        "kawa/herbata/woda",
-        "mini bar",
-        "suszarka do włosów",
-        "szlafrok i kapcie",
-        "żelazko / deska"
-      ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
-      "description": "Łazienka z wanną i prysznicem, łoże małżeńskie w jednym pomieszczeniu oraz dwa oddzielne łóżka w drugim. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2f9ea-a786-11ec-b909-0242ac120002",
       "name": "Apartament Junior",
-      "price": 1620,
+      "price": 720,
       "property": {
         "guests": 2,
         "beds": [
@@ -204,18 +146,12 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Łazienka z wanną i prysznicem, łoże małżeńskie, dodatkowa rozkładana sofa, pokój dzienny. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2fb52-a786-11ec-b909-0242ac120002",
       "name": "Apartament Senior",
-      "price": 1720,
+      "price": 720,
       "property": {
         "guests": 3,
         "beds": [
@@ -239,18 +175,12 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Apartament dwupoziomowy. Pokój dzienny z kącikiem wypoczynkowym z rozkładaną sofą, dwuosobowa sypialnia z łazienką, jednoosobowa sypialnia z łazienką - na antresoli. Wszystkie pokoje dla niepalących."
     },
     {
       "id": "f2f2fcba-a786-11ec-b909-0242ac120002",
       "name": "Pokój Grand",
-      "price": 1920,
+      "price": 920,
       "property": {
         "guests": 4,
         "beds": [
@@ -274,87 +204,81 @@
         "szlafrok i kapcie",
         "żelazko / deska"
       ],
-      "images": {
-        "main": "1",
-        "grid1": "2",
-        "grid2": "3",
-        "grid3": "4"
-      },
       "description": "Apartament dwupoziomowy. Pokój główny z kącikiem wypoczynkowym z rozkładaną sofą, dwie dwuosobowe sypialnie, dwie łazienki. Taras z krzesłami i stolikiem. Wszystkie pokoje dla niepalących."
     }
   ],
   "treatments": [
     {
       "id": "f2f2fe4a-a786-11ec-b909-0242ac120002",
+      "image": "head",
       "name": "Masaż głowy",
       "time": 20,
       "price": 100,
-      "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami.",
-      "img": "../assets/aroma-treatment.jpg"
+      "description": "Elementy zaczerpnięte z orientalnych kultur połączone z techniką ruchów klasycznych dostarczą głębokiego odprężenia, zredukują zmęczenie psychiczne i przywrócą uczucie wyciszenia. Może był łączony z innymi wybranymi masażami."
     },
     {
       "id": "f2f2ffbc-a786-11ec-b909-0242ac120002",
+      "image": "thai",
       "name": "Masaż Tajski całego ciała",
       "time": 60,
       "price": 220,
-      "description": "Głęboki masaż, stanowiący sekwencję technik łączących akupresurę ważniejszych punktów na ciele człowieka z elementami pasywnej jogi, rozciągania i refleksologii. Masaż wykonywany za pomocą dłoni, kciuków, łokci i przedramion a także stóp.",
-      "img": "../assets/thai-treatment.jpg"
+      "description": "Głęboki masaż, stanowiący sekwencję technik łączących akupresurę ważniejszych punktów na ciele człowieka z elementami pasywnej jogi, rozciągania i refleksologii. Masaż wykonywany za pomocą dłoni, kciuków, łokci i przedramion a także stóp."
     },
     {
       "id": "f2f30138-a786-11ec-b909-0242ac120002",
+      "image": "balinese",
       "name": "Masaż Balijski całego ciała",
       "time": 60,
       "price": 200,
-      "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała.",
-      "img": "../assets/balinese-treatment.jpg"
+      "description": "Wykonywany jest na bazie olejku orientalnego, który w pierwszej fazie jest dokładnie wmasowany technikami głaskania i mocnego rozcierania, a w dalszej części następuje ugniatanie połączone z refleksologią i uciskiem poszczególnych części ciała."
     },
     {
       "id": "f2f304e4-a786-11ec-b909-0242ac120002",
+      "image": "rock",
       "name": "Masaż SPA gorącymi kamieniami",
       "time": 75,
       "price": 160,
-      "description": "Relaksujący masaż całego ciała przy użyciu rozgrzanych kamieni bazaltowych oraz klasycznej metody masażu wykorzystującej techniki relaksacyjne. Masaż doskonale rozgrzewa i likwiduje napięcie mięśniowe.",
-      "img": "../assets/rock-treatment.jpg"
+      "description": "Relaksujący masaż całego ciała przy użyciu rozgrzanych kamieni bazaltowych oraz klasycznej metody masażu wykorzystującej techniki relaksacyjne. Masaż doskonale rozgrzewa i likwiduje napięcie mięśniowe."
     },
     {
       "id": "f2f30656-a786-11ec-b909-0242ac120002",
+      "image": "abhyangam",
       "name": "Abhyangam",
       "time": 90,
       "price": 250,
-      "description": "Tradycyjny masaż ajurwedyjski całego ciała oraz głowy na bazie olejów ziołowych wykorzystujący relaksacyjne techniki masażu oraz ucisk punktów energetycznych. Daje poczucie pełnego relaksu i rozluźnienia, któremu dodatkowo towarzyszy aromat unikalnych olejów ziołowych.",
-      "img": "../assets/abhyangam-treatment.jpg"
+      "description": "Tradycyjny masaż ajurwedyjski całego ciała oraz głowy na bazie olejów ziołowych wykorzystujący relaksacyjne techniki masażu oraz ucisk punktów energetycznych. Daje poczucie pełnego relaksu i rozluźnienia, któremu dodatkowo towarzyszy aromat unikalnych olejów ziołowych."
     },
     {
       "id": "f2f307be-a786-11ec-b909-0242ac120002",
+      "image": "feet",
       "name": "Tajski masaż stóp",
       "time": 50,
       "price": 90,
-      "description": "Dość intensywny masaż stopy i łydki wykonywany dłońmi oraz specjalną pałeczką z drewna różanego na bazie maści rozgrzewającej.",
-      "img": "../assets/feet-treatment.jpg"
+      "description": "Dość intensywny masaż stopy i łydki wykonywany dłońmi oraz specjalną pałeczką z drewna różanego na bazie maści rozgrzewającej."
     },
     {
       "id": "f2f30926-a786-11ec-b909-0242ac120002",
+      "image": "minerals",
       "name": "SPA & MINERALS - rewitalizująco - ujędrniający zabieg na ciało",
       "time": 60,
       "price": 300,
-      "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach.",
-      "img": "../assets/minerals-treatment.jpg"
+      "description": "Zabieg ujędrniający dedykowany dla skóry wymagającej intensywnego nawilżenia, rewitalizacji oraz detoksykacji. Działa silnie relaksująco i wygładzająco. Zaczerpnięte z głębin mórz i oceanów składniki aktywne docierają do wnętrza komórek skóry, dzięki czemu poprawiają jej elastyczność i jędrność, dodają witalności oraz odżywiają i remineralizują skórę. Wyselekcjonowany gatunek brązowej algi Silky Sea Palm Extract dostarcza skórze aminokwasów, witamin oraz kwasów tłuszczowych, stymulując skórę do wielopoziomowej odnowy i regeneracji. Dodatkowo woda morska z wyspy Noirmoutier o wyjątkowej czystości i zawartości minerałów, wzmacnia i nawadnia skórę zwiększając jej elastyczność. Bogata w magnez i potas wapienna Coralina, wpływa na zachowanie równowagi hydro-lipidowej skóry, wiążąc wodę w jej głębokich warstwach."
     },
     {
       "id": "f2f30a7a-a786-11ec-b909-0242ac120002",
+      "image": "champagne",
       "name": "CHAMPAGNE & TRUFFLE - zabieg rewitalizujący na ciało",
       "time": 120,
       "price": 400,
-      "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi.",
-      "img": "../assets/champagne-treatment.jpg"
+      "description": "Ekskluzywny zabieg pielęgnacyjny, dedykowany dla skóry wymagającej głębokiej regeneracji. Aktywne ekstrakty z pestek białych winogron oraz z białej trufli, intensywnie odżywiają skórę zapewniając jej aksamitną gładkość. Receptura preparatów Dr Irena Eris Prosystem Professional dodatkowo wzbogacona o Tri-Oil Complex poprawia jędrność i elastyczność skóry ciała. Zmysłowe aromaty towarzyszące podczas zabiegu dają uczucie relaksu i głębokiego odprężenia przenosząc w malownicze regiony Szampanii. Ekstrakt z białej trufli posiada odżywcze i antyoksydacyjne polifenole, które zapobiegają utlenianiu lipidów, aktywnie regenerują oraz kondycjonują skórę. Dodatkowo działa intensywnie nawilżająco i ujędrniająco. Łagodzi i chroni skórę przed podrażnieniami i czynnikami zewnątrzpochodnymi."
     },
     {
       "id": "f2f30df4-a786-11ec-b909-0242ac120002",
+      "image": "aroma",
       "name": "Eden All senses",
       "time": 100,
       "price": 140,
-      "description": "Innowacyjne połączenie odnowy ciała z doznaniami na zmysły zapachu, wzroku, słuchu i czucia w Edenie. Elementy zabiegu to: peeling, elementy masażu kosmetycznego na bazie wosku świecy aromatycznej, maska na ciało, nałożenie kremów, 20 minutowy pobyt w Edenie zakończony prysznicem Vichy.",
-      "img": "../assets/aroma-treatment.jpg"
+      "description": "Innowacyjne połączenie odnowy ciała z doznaniami na zmysły zapachu, wzroku, słuchu i czucia w Edenie. Elementy zabiegu to: peeling, elementy masażu kosmetycznego na bazie wosku świecy aromatycznej, maska na ciało, nałożenie kremów, 20 minutowy pobyt w Edenie zakończony prysznicem Vichy."
     }
   ],
   "cart": {

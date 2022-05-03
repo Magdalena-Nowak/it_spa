@@ -5,8 +5,8 @@ export function TreatmentsList() {
   const section = document.createElement("section");
 
   section.innerHTML = `
-    <h2>Treatments</h2>
-    <header>Loading...</header>
+    <h2 class="text-center">Treatments</h2>
+    <header class="text-center">Loading...</header>
     `;
 
   axios.get("http://localhost:3000/treatments").then((response) => {
