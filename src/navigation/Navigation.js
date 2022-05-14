@@ -16,9 +16,6 @@ import {
 import {
   Login
 } from "../views/Login";
-import {
-  Reservation
-} from "../views/Reservation";
 
 const navItems = [{
     name: "Home",
@@ -35,10 +32,6 @@ const navItems = [{
   {
     name: "Koszyk",
     component: Cart
-  },
-  {
-    name: "Rezerwacja",
-    component: Reservation
   },
   {
     name: `<i class="fa-solid fa-user"></i> Konto`,

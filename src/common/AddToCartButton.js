@@ -12,7 +12,6 @@ export function AddToCartButton(item, text, classes) {
     classes,
     onClick: (event) => {
       cartManager.addItem(item);
-      console.log(event.target);
 
       if (event.target.classList.contains("book-room")) {
         const formWrapper = event.target.closest('.check-availability__popup');
