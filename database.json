@@ -14,6 +14,7 @@
   "rooms": [
     {
       "id": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Pokój Standard",
       "price": 400,
       "property": {
@@ -38,6 +39,7 @@
     },
     {
       "id": "f2f2efe0-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Pokój Superior",
       "price": 570,
       "property": {
@@ -66,6 +68,7 @@
     },
     {
       "id": "f2f2f1d4-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Pokój Executive",
       "price": 570,
       "property": {
@@ -93,6 +96,7 @@
     },
     {
       "id": "f2f2f3b4-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Apartament Studio",
       "price": 600,
       "property": {
@@ -122,6 +126,7 @@
     },
     {
       "id": "f2f2f9ea-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Apartament Junior",
       "price": 720,
       "property": {
@@ -150,6 +155,7 @@
     },
     {
       "id": "f2f2fb52-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Apartament Senior",
       "price": 720,
       "property": {
@@ -179,6 +185,7 @@
     },
     {
       "id": "f2f2fcba-a786-11ec-b909-0242ac120002",
+      "quantity": 1,
       "name": "Pokój Grand",
       "price": 920,
       "property": {
@@ -288,5 +295,49 @@
         "quantity": 1
       }
     ]
-  }
+  },
+  "booked": [
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-14",
+      "endDate": "2022-05-26",
+      "id": 1
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-20",
+      "endDate": "2022-05-27",
+      "id": 2
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-22",
+      "endDate": "2022-05-28",
+      "id": 3
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-07-25",
+      "endDate": "2022-07-29",
+      "id": 4
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-24",
+      "endDate": "2022-05-27",
+      "id": 5
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-20",
+      "endDate": "2022-05-27",
+      "id": 6
+    },
+    {
+      "roomId": "1f2f2ec7a-a786-11ec-b909-0242ac120002",
+      "startDate": "2022-05-20",
+      "endDate": "2022-05-27",
+      "id": 7
+    }
+  ]
 }
