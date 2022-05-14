@@ -94,8 +94,7 @@ export const cartManager = {
       return 0;
     } else {
       const parsedContent = JSON.parse(cart);
-
-      return parsedContent.map((item) => item.price).reduce((a, b) => a + b, 0);
+      return parsedContent.map((item) => item.price * item.value).reduce((a, b) => a + b, 0);
     }
   },
 };

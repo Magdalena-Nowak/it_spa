@@ -1,16 +1,42 @@
-import { Home } from "../views/Home";
-import { RoomsList } from "../views/RoomsList";
-import { Button } from "../common/Button";
-import { TreatmentsList } from "../views/TreatmentsList";
-import { Cart } from "../views/Cart";
-import { Login } from "../views/Login";
+import {
+  Home
+} from "../views/Home";
+import {
+  RoomsList
+} from "../views/RoomsList";
+import {
+  Button
+} from "../common/Button";
+import {
+  TreatmentsList
+} from "../views/TreatmentsList";
+import {
+  Cart
+} from "../views/Cart";
+import {
+  Login
+} from "../views/Login";
 
-const navItems = [
-  { name: "Home", component: Home },
-  { name: "Pokoje", component: RoomsList },
-  { name: "Zabiegi", component: TreatmentsList },
-  { name: "Koszyk", component: Cart },
-  { name: `<i class="fa-solid fa-user"></i> Konto`, component: Login },
+const navItems = [{
+    name: "Home",
+    component: Home
+  },
+  {
+    name: "Pokoje",
+    component: RoomsList
+  },
+  {
+    name: "Zabiegi",
+    component: TreatmentsList
+  },
+  {
+    name: "Koszyk",
+    component: Cart
+  },
+  {
+    name: `<i class="fa-solid fa-user"></i> Konto`,
+    component: Login
+  },
 ];
 
 export function Navigation() {

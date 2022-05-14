@@ -1,5 +1,9 @@
-import { Home } from "../views/Home";
-import { Register } from "./Register";
+import {
+  Home
+} from "../views/Home";
+import {
+  Register
+} from "./Register";
 const axios = require("axios");
 
 export function Login() {
@@ -70,13 +74,10 @@ export function Login() {
           (item) => item.email === emailInput.value
         );
 
-        console.log("currentUser", currentUser);
         if (currentUser) {
           currentPassword =
             currentUser.password === passwordInput.value ? true : false;
         }
-
-        console.log("currentPassword", currentPassword);
 
         if (currentUser || currentPassword) {
           emailInput.value = "";

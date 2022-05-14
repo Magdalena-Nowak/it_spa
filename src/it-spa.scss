@@ -4,7 +4,8 @@
 $darkGray: #293b44;
 $lightBrown: #9f928b;
 $light: #fffffd;
-$headerFamily: "Suez One", cursive;
+$headerFamily: "Suez One",
+cursive;
 $mainFamily: "Forum";
 $fontColor: #62717b;
 $mainFontSize: 1.4rem;
@@ -23,6 +24,7 @@ body {
   background-color: $light;
   font-size: $mainFontSize;
   font-family: $mainFamily;
+  position: relative;
 }
 
 .btn,
@@ -76,19 +78,23 @@ input {
 
 //Rooms
 .room {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &__action-btns {
     display: flex;
     flex-direction: column;
   }
+
   &__title {
     width: 100%;
   }
@@ -98,9 +104,11 @@ input {
   .room {
     margin: 1.5rem 0;
     flex-wrap: nowrap;
+
     &__img-wrapper {
       width: 50%;
     }
+
     &__title {
       width: auto;
     }
@@ -125,12 +133,15 @@ input {
 .bg-danger {
   background-color: #ea515f !important;
 }
+
 .bg-warning {
   background-color: #fea802 !important;
 }
+
 .bg-info {
   background-color: #138e90 !important;
 }
+
 .bg-success {
   background-color: #168f5f !important;
 }
@@ -204,6 +215,7 @@ input {
 }
 
 @media (min-width: 992px) {
+
   .login__section,
   .register__section {
     width: 40%;
@@ -216,14 +228,17 @@ input {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
+
   &__img-wrapper {
     height: 85vh;
   }
+
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-around;
@@ -233,8 +248,36 @@ input {
 @media (min-width: 992px) {
   .treatment {
     align-items: center;
+
     &__wrapper {
       align-self: stretch;
     }
   }
+}
+
+//Reservation
+
+.check-availability__popup {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $light;
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  z-index: 10;
+}
+
+form {
+  width: 70%;
+}
+
+.error-message {
+  color: rgb(216, 2, 2);
 }
